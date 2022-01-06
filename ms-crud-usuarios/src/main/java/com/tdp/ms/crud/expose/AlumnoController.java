@@ -42,7 +42,7 @@ public class AlumnoController extends CommonController<Alumno, AlumnoService> {
 				
 				
 		if(alumnoEncontrado.isEmpty()) {
-			List<String> errorMensaje = Arrays.asList("Error: No se pudo editar, el ID: ", id.toString(), "no existe en la base datos!" );
+			List<String> errorMensaje = Arrays.asList("Error: No se pudo editar, el ID:", id.toString(), "no existe en la base datos!" );
 			response.put("mensaje", errorMensaje.stream().collect(Collectors.joining(" ")));
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
 		}
@@ -63,7 +63,7 @@ public class AlumnoController extends CommonController<Alumno, AlumnoService> {
 		}
 					
 		response.put("mensaje", "La entidad ha sido actualizada con éxito!");
-        response.put("curso", alumnoBd);
+        response.put("alumno", alumnoBd);
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
 	}
 

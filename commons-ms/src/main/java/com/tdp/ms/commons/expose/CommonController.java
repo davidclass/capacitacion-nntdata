@@ -99,7 +99,6 @@ public class CommonController<E, S extends CommonService<E>>{
 	public ResponseEntity<?> actualizarAlumno(@PathVariable Long id){
 		Map<String, Object> response = new HashMap<>();
 
-		
 		try {
 			alumnoService.deleteById(id);
 
@@ -111,9 +110,12 @@ public class CommonController<E, S extends CommonService<E>>{
         }
 		
 		response.put("mensaje", "El entidad ha sido eliminada con éxito!");
-		return ResponseEntity.noContent().build();				
+		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);			
 	}
 	
+	/**
+     * Metodo para validad la entidad.
+     */
 	protected ResponseEntity<?> validar(BindingResult result){
 		Map<String, Object> errores = new HashMap<>();
 		result.getFieldErrors().forEach(err -> {
