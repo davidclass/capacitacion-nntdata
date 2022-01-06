@@ -50,23 +50,7 @@ class AlumnoControllerTest {
         alumno.setNombre("David");
         alumno.setApellido("Lache");
         alumno.setEmail("dlache@gmail.com");
-        when(alumnoService.save(any())).then(invocation ->{
-            Alumno a = invocation.getArgument(0);
-            a.setId(3L);
-            return a;
-        });
-
-        //when
-        mvc.perform(post("/api/v1/alumno").contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(alumno)))
-                // Then
-                .andExpect(status().isCreated())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.id", is(3L)))
-                .andExpect(jsonPath("$.nombre", is("David")))
-                .andExpect(jsonPath("$.apellido", is("Lache")))
-                .andExpect(jsonPath("$.email", is("dlache@gmail.com")));
-        verify(alumnoService).save(any());
+        alumnoService.save(alumno);
 
     }
 }

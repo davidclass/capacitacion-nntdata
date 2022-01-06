@@ -11,14 +11,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8090/api/crud/v1/alumno",
+					"raw": "localhost:8090/api/v1/alumno",
 					"host": [
 						"localhost"
 					],
 					"port": "8090",
 					"path": [
 						"api",
-						"crud",
 						"v1",
 						"alumno"
 					]
@@ -62,7 +61,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"Saam\",\r\n    \"apellido\": \"Vela\",\r\n    \"email\": \"svela@hotmail.com\"\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Gary\",\r\n    \"apellido\": \"Altuna\",\r\n    \"email\": \"galtuna@hotmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,17 +69,16 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8090/api/crud/v1/alumno/3",
+					"raw": "localhost:8090/api/v1/alumno/7",
 					"host": [
 						"localhost"
 					],
 					"port": "8090",
 					"path": [
 						"api",
-						"crud",
 						"v1",
 						"alumno",
-						"3"
+						"7"
 					]
 				}
 			},
@@ -92,17 +90,16 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8090/api/crud/v1/alumno/3",
+					"raw": "localhost:8090/api/v1/alumno/4",
 					"host": [
 						"localhost"
 					],
 					"port": "8090",
 					"path": [
 						"api",
-						"crud",
 						"v1",
 						"alumno",
-						"3"
+						"4"
 					]
 				}
 			},
