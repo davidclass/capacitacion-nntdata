@@ -33,7 +33,7 @@ public class AlumnoController extends CommonController<Alumno, AlumnoService> {
 	public ResponseEntity<?> actualizarAlumno(@Valid @RequestBody Alumno alumno, BindingResult result, @PathVariable Long id){
 		
 		Optional<Alumno> alumnoEncontrado = alumnoService.findById(id);
-		Alumno alumnoBd = null;
+		Alumno alumnoBd;
 		Map<String, Object> response = new HashMap<>();
 		
 		if(result.hasErrors()){

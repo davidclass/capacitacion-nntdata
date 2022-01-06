@@ -11,7 +11,4 @@ import com.tdp.ms.crud.business.repository.AlumnoDao;
 @Service
 public class AlumnoServiceImpl extends CommonServiceImpl<Alumno, AlumnoDao> implements AlumnoService {
 
-	
-
-
 }
